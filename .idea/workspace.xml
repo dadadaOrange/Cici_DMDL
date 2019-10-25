@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c40ae40-be60-4cb0-8b03-7841b5cda3bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Cici_DMDL.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2/classTst1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week1/week1 assignment.html" beforeDir="false" afterPath="$PROJECT_DIR$/week1/week1 assignment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week1/week1.html" beforeDir="false" afterPath="$PROJECT_DIR$/week1/week1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment/week5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment/week6-nloop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment/week6-sloop.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment/week6_rsv.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment/week7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week3/block.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week3/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week3/web.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week7/Start3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week7/data2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week7/question.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week7/start.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week8/function.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +26,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -37,7 +44,11 @@
     </option>
   </component>
   <component name="ProjectId" id="1Ql3tnDDb70hiFaOiHfX1Hh1SBS" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -45,9 +56,22 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/week7" />
+      <recent name="$PROJECT_DIR$/week4" />
+      <recent name="$PROJECT_DIR$/week3" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -71,7 +95,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568331572855</updated>
-      <workItem from="1568331574263" duration="1216000" />
+      <workItem from="1568331574263" duration="1362000" />
+      <workItem from="1568403689427" duration="4000" />
+      <workItem from="1568426759368" duration="92000" />
+      <workItem from="1568934280457" duration="3671000" />
+      <workItem from="1569538223517" duration="300000" />
+      <workItem from="1570143509563" duration="2545000" />
+      <workItem from="1570149107845" duration="281000" />
+      <workItem from="1570504695269" duration="54000" />
+      <workItem from="1570504798102" duration="432000" />
+      <workItem from="1570748455672" duration="354000" />
+      <workItem from="1571353802805" duration="3785000" />
+      <workItem from="1571947487992" duration="1653000" />
     </task>
     <servers />
   </component>
@@ -83,10 +118,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

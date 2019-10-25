@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script>
+		
+		//do some math and store in a variable
+		function result(){
+			var birthday=document.getElementById("birthday").value;
+			var datetime=document.getElementById("datetime").value;
+
+			var age=parseInt(datetime)-parseInt(birthday);
+			document.getElementById("age").value=age;
+			
+		}
+
+	</script>
+	<body>
+		<input type="datetime" placeholder="enter birthday here" id="birthday" />
+		<input type="datetime" placeholder="enter date" id="datetime" />
+		<input type="button" value="result" onclick="result()" />
+		<textarea id="age"></textarea>
+		
+	</body>
+</html>

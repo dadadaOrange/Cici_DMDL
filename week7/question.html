@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link rel="stylesheet" type="text/css" href="css/question.css">
+	
+</head>
+<body>
+	<header>
+		<h1>Quiz</h1>
+		<button id="end_btn" class="secondary">End Practice</button>
+	</header>
+	<main>
+		<article class="card">
+			<h3>Question 1 of 8</h3>
+			<hr>
+			<p>What tag should I use if I want to add an external javascript file</p>
+			<ol type="A">
+				<li><label><input type="radio" name="option">script</label></li>
+				<li><label><input type="radio" name="option">javascript</label></li>
+				<li><label><input type="radio" name="option">include</label></li>
+				<li><label><input type="radio" name="option">style</li>
+			</ol>
+			
+		</article>
+	</main>
+	<footer>
+		<div id="progressDots">
+			<div class="correct"></div>
+			<div class="incorrect"></div>
+			<div class="correct"></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<a href="report.html">View report</a>
+		</div>
+
+		<div id="feedbackContainer" class="correct hide">
+			<h4>Nice Job!</h4>
+
+			<p>Some very helpful feedback will go here.</p>
+		</div>
+
+		<div id="footerActions">
+			<button id="check_btn">Check Answer</button>
+			<nav id="navQuestions" class="hide">
+				<button id="previous_btn" class="secondary" disabled="true">previous</button>
+				<button id="next_btn" class="secondary">next</button>
+			</nav>
+		</div>
+	</footer>
+	<script type="text/javascript">
+		
+		var checkBtn = document.querySelector("#check_btn");
+		var feedbackContainer = document.querySelector("#feedbackContainer");
+		var navQuestions = document.querySelector("#navQuestions");
+		var nextBtn = document.querySelector("#next_btn");
+		var previousBtn = document.querySelector("#previous_btn");
+		var endBtn = document.querySelector("#end_btn");
+
+		// end practice
+		endBtn.addEventListener("click", function(){
+			window.location.href = "start.html";
+		});
+
+		
+
+		// check the answer				
+		checkBtn.addEventListener("click", function(){
+			feedbackContainer.classList.toggle("hide");
+			navQuestions.classList.toggle("hide");
+			checkBtn.classList.toggle("hide");
+		});
+
+		// navigate navQuestions
+		nextBtn.addEventListener("click", function(){
+			feedbackContainer.classList.toggle("hide");
+			navQuestions.classList.toggle("hide");
+			checkBtn.classList.toggle("hide");
+		});
+
+		previousBtn.addEventListener("click", function(){
+			feedbackContainer.classList.toggle("hide");
+			navQuestions.classList.toggle("hide");
+			checkBtn.classList.toggle("hide");
+		});
+
+
+	</script>
+</body>
+</html>
