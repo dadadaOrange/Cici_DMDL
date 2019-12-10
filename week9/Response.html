@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const url = 'https://reqres.in/api/users/';
+    fetch(url, {
+        method: 'post',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: 'Alex Britez',
+            job: 'UX Designer'
+        })
+    })
+        .then((response)=>{
+            return response.json();
+        })
+            .then((data)=>{
+                console.log(data);
+            });
+    // fetch(url)
+    // .then((response)=>{
+    //     return response.json();
+    // })
+    //     .then((data)=>{
+    //         console.log(data);
+    //     });
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
