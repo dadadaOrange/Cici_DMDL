@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c40ae40-be60-4cb0-8b03-7841b5cda3bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/week10/Animation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week9/Response.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Flashcard_App/First.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Flashcard_App/Login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Flashcard_App/QuizAnswer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Flashcard_App/QuizCard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Flashcard_App/Register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Flashcard_App/Start.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week8/function.html" beforeDir="false" afterPath="$PROJECT_DIR$/week8/function.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,6 +105,7 @@
       <workItem from="1573171235983" duration="2977000" />
       <workItem from="1573777439689" duration="668000" />
       <workItem from="1575400885840" duration="215000" />
+      <workItem from="1576011533282" duration="10901000" />
     </task>
     <servers />
   </component>
