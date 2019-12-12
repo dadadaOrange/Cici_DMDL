@@ -1,0 +1,557 @@
+﻿<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+   
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Calculation</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="stylesheet" href="../Assignments/css/bootstrap.min.css">
+
+<!--Fonts-->
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+<!--owl-carousel css-->
+<link rel="stylesheet" href="css/owl-carousel/owl.carousel.css">
+<link rel="stylesheet" href="css/owl-carousel/owl.theme.css">
+<link rel="stylesheet" href="css/owl-carousel/owl.transitions.css">
+
+<link rel="stylesheet"  href="css/animations.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/color1.css">
+
+<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+<!--    style for calculator-->
+<style>
+ 
+        #map{
+            height: 800px;
+            width: 100%;
+        }
+
+    table {
+        margin: auto;
+        background-color: #222;
+        width: 295px;
+        max-width: 295px;
+        height: 325px;
+        text-align: center;
+        border-radius: 4px;
+        padding-right: 10px;
+    }
+
+    input {
+        outline: 0;
+        position: relative;
+        left: 5px;
+        top: 5px;
+        border: 0;
+        color: #495069;
+        background-color: #fff;
+        border-radius: 4px;
+        width: 60px;
+        height: 50px;
+        float: left;
+        margin: 5px;
+        font-size: 20px;
+        box-shadow: 0 4px rgba(0,0,0,0.2);
+        margin-bottom: 15px;
+    }
+
+    input:hover {
+        border: 0 solid #000;
+        color: #495069;
+        background-color: #fff;
+        border-radius: 4px;
+        width: 60px;
+        height: 50px;
+        float: left;
+        margin: 5px;
+        font-size: 20px;
+        box-shadow: 0 4px #b0d2cf;
+    }
+
+    input:active {
+        top: 4px;
+        border: 0 solid #000;
+        color: #495069;
+        background-color: #fff;
+        border-radius: 4px;
+        width: 60px;
+        height: 50px;
+        float: left;
+        margin: 5px;
+        font-size: 20px;
+        box-shadow: none;
+    }
+
+    #display {
+        width: 265px;
+        max-width: 270px;
+        font-size: 26px;
+        text-align: right;
+        background-color: #bcbd95;
+        float: left;
+    }
+
+    #display:hover {
+        width: 270px;
+        font-size: 26px;
+        text-align: right;
+        background-color: #bcbd95;
+        box-shadow: 0 4px rgba(0,0,0,0.2);
+    }
+
+    #display:active {
+        top: 5px;
+        width: 270px;
+        font-size: 26px;
+        text-align: right;
+        background-color: #bcbd95;
+        box-shadow: 0 4px rgba(0,0,0,0.2);
+    }
+
+    .operator {
+        background-color: #cee9ea;
+        position: relative;
+    }
+
+    .operator:hover {
+        background-color: #cee9ea;
+        box-shadow: 0 4px #b0d2cf;
+    }
+
+    .operator:active {
+        top: 4px;
+        box-shadow: none;
+    }
+
+    #clear {
+        float: left;
+        position: relative;
+        display: block;
+        background-color: #ff9fa8;
+    }
+
+    #clear:hover {
+        float: left;
+        display: block;
+        background-color: #F297A0;
+        margin-bottom: 15px;
+        box-shadow: 0 4px #CC7F86;
+    }
+
+    #clear:active {
+        float: left;
+        top: 4px;
+        display: block;
+        background-color: #F297A0;
+        margin-bottom: 15px;
+        box-shadow: none;
+    }
+</style>
+<!-- style for claculator end -->
+</head>
+
+<body id="page-top" class="index">
+<!-- Preloader -->
+<div class="preloader"></div>
+<header>
+	<!-- Navigation -->
+	<nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+				</button>
+				<a style="display: none" class="navbar-brand page-scroll" href="#page-top"><img src="images/logos/logo.png" alt=""></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav text-center">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="timeDifference.html">Time Difference</a></li>
+					<li><a href="timeZone.html">Time Zone</a></li>
+					<li><a href="calculation.html">Calculation</a></li>
+					<li><a href="quiz.html">Quiz</a></li>
+<!-- calculator modal -->
+					<li><div>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Calculator</button>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <form name="calculator" id="calculator_device1">
+                <table>
+                    <tr>
+                        <td colspan="4">
+                            <input type="text" name="display" id="display" disabled>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                        <td><input type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                        <td><input type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                        <td><input type="button" class="operator" name="plus" value="+" onclick="calculator.display.value += '+'"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                        <td><input type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                        <td><input type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                        <td><input type="button" class="operator" name="minus" value="-" onclick="calculator.display.value += '-'"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                        <td><input type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                        <td><input type="button" name="nine" value="9" onclick="calculator.display.value += '9'"></td>
+                        <td><input type="button" class="operator" name="times" value="x" onclick="calculator.display.value += '*'"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" id="clear" name="clear" value="c" onclick="calculator.display.value = ''"></td>
+                        <td><input type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                        <td><input type="button" name="doit" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></td>
+                        <td><input type="button" class="operator" name="div" value="/" onclick="calculator.display.value += '/'"></td>
+
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	<div id="page_header">
+		<div class="page_title">
+			<h3>Calculation</h3>
+		</div>
+	</div>
+</header>
+
+<!-- Time Zone Page -->
+<section class="testimonials text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 ">
+				<h2 class="section-heading"> What time is it in San Francisco?</h2>
+			</div>
+		</div>
+		<div id="owl-demo-3">
+			<div class="testmonials-list">
+					<img src="images/Time/cal-1.png" alt="">
+				<p><em>What is the time in San Francisco if the time at Buffalo is 11:00 AM? </em></p>
+				<p style="font-weight: bold">STEP 1: Calculate the time difference</p>
+					<p><em>Since San Francisco is in the time zone UTC-8 and Buffalo is in the tiem zone UTC-5, so the time difference between San Francisco and Buffalo is </em></p>
+				<div class = "formulaBlcok">
+					<p>8 - 5 =3 hours</p>
+				</div>
+				<br/><br/>
+				<p style="font-weight: bold">STEP 2: Calculate the actual time</p>
+				<p><em>Since San Francisco is at the west side of Buffalo, so the time at San Francisco is earlier than the time at Buffalo</em></p>
+				<div class = "formulaBlcok">
+					<p>11:00 AM - 3 hours = 8:00 AM</p>	
+				</div>
+			</div> 
+			
+		</div> 
+<!-- Google Map -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary load_more " data-toggle="modal" data-target="#exampleModal">
+  Launch Google Map
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h1>My Google Map</h1>
+    <div id="map"></div>
+    <script>
+        function initMap(){
+
+            //ADD CITIES
+            var cities = {
+                "Australia/Adelaide":{
+                    city: "Adelaide",
+                    coords: {
+                        lat:-34.92123, 
+                        lng: 138.599503
+                    }
+                },
+                "Asia/Shanghai":{
+                    city: "Shanghai",
+                    coords: {
+                        lat:31.22222, 
+                        lng: 121.45806
+                    }
+                },
+                "America/New_York":{
+                    city: "New York",
+                    coords: {
+                        lat:40.730610, 
+                        lng: -73.935242
+                    }
+                },
+                "Asia/Baku":{
+                    city: "Baku",
+                    coords: {
+                        lat:40.409264, 
+                        lng: 49.867092
+                    }
+                },
+                "Europe/Amsterdam":{
+                    city: "Amsterdam",
+                    coords: {
+                        lat:52.370216, 
+                        lng: 4.895168
+                    }
+                },
+                "Europe/Berlin":{
+                    city: "Berlin",
+                    coords: {
+                        lat:52.520008, 
+                        lng: 13.404954
+                    }
+                },
+                "Europe/Moscow":{
+                    city: "Moscow",
+                    coords: {
+                        lat:55.751244, 
+                        lng: 37.618423
+                    }
+                },
+                "Indian/Maldives":{
+                    city: "Maldives",
+                    coords: {
+                        lat:1.924992, 
+                        lng: 73.399658
+                    }
+                },
+                "Pacific/Fiji":{
+                    city: "Fiji",
+                    coords: {
+                        lat: -17.713371, 
+                        lng: 178.065033
+                    }
+                },
+                "America/Mexico_City":{
+                    city: "Mexico_City",
+                    coords: {
+                        lat: 19.432608, 
+                        lng: -99.133209
+                    }
+                },
+                "America/Argentina/Tucuman":{
+                    city: "Tucuman",
+                    coords: {
+                        lat: -26.808285, 
+                        lng: -65.217590
+                    }
+                },
+                "America/Chicago":{
+                    city: "Chicago",
+                    coords: {
+                        lat: 41.881832, 
+                        lng: -87.623177
+                    }
+                },
+                "America/Denver":{
+                    city: "Denver",
+                    coords: {
+                        lat: 39.742043, 
+                        lng: -104.991531
+                    }
+                },
+                "America/Havana":{
+                    city: "Havana",
+                    coords: {
+                        lat: 23.113592, 
+                        lng: -82.366592
+                    }
+                },
+                "Africa/Juba":{
+                    city: "Juba",
+                    coords: {
+                        lat: 4.859363, 
+                        lng: 31.571251
+                    }
+                },
+                "Africa/Abidijan":{
+                    city: "Abidijan",
+                    coords: {
+                        lat: 5.345317, 
+                        lng: -4.024429
+                    }
+                }
+            }
+
+            for(var city in cities){
+
+                console.log(city);
+                fetch(`http://worldtimeapi.org/api/timezone/${city}`)
+                    .then(response => {
+                        return response.json()
+                      })
+                      .then(data => {
+                        addMarker ({coords:cities[data.timezone].coords,
+                            content: cities[data.timezone].city + " " + data.datetime
+                        });
+                      });
+
+
+            }
+
+            //map options
+            var options = {
+                zoom: 3, 
+                center: {lat: 41.902782, lng: 12.496366}
+            }
+            //New map
+            var map = new 
+            google.maps.Map (document.getElementById('map'), options);
+
+            //add marker function       
+            function addMarker (props){ 
+                // Add marker
+                var marker = new google.maps.Marker ({
+                    position: props. coords,
+                    //{lat:40.730610, lng: -73.935242},
+                    map:map,
+                //icon:''
+                });
+
+                //check content
+                if(props.content){
+                        var infoWindow = new google.maps.InfoWindow ({
+                        content: props.content
+                    });
+                            marker. addListener ('click', function(){
+                        infoWindow.open(map,marker);
+                    });
+                }
+            }
+        }
+            </script>
+    <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsykH1f5s62sydbyxAwQJFG33EQYmsD0M&callback=initMap">
+    </script>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Google Map End -->
+
+
+
+
+
+
+		<button class="btn load_more" onclick="window.location='quiz.html'">Let's do a quiz!</button>
+</section>
+<!-- Time Zone Page End -->
+
+<!-- Go Through Class -->
+<section id="class-facts" class="go-through-class">
+	<div class="container animatedParent">
+		<div class="row">
+			<div class="col-lg-12 text-center col-sm-12">
+				<h2 class="section-heading">Go Through the Class</h2>
+			</div>
+		</div>
+		<div class="row wow fadeInUp slower">
+			<div class="col-md-3">
+				<div class="class-box hide-bar">
+					<i class="iconn-1"></i>
+					<h4>Time Difference </h4>
+					<p>100%</p>
+				</div>                    
+			</div>
+			<div class="col-md-3">
+				<div class="class-box pro">
+					<i class="iconn-2"></i>
+					<h4>Time Zone </h4>
+					<p>100%</p>		
+				</div>                    
+			</div>
+			<div class="col-md-3">
+				<div class="class-box">
+					<i class="iconn-3"></i>
+					<h4>Calculation </h4>
+					<p>100%</p>					
+				</div>                    
+			</div>
+			<div class="col-md-3">
+				<div class="class-box pro">
+					<i class="iconn-4"></i>
+					<h4>Quiz </h4>
+					<p>0%</p>					
+				</div>                    
+			</div>
+			</div>
+	</div>
+</section>
+<!-- Go Through Class End -->
+<footer id="footer">
+			<div class="col-md-12">
+				<span class="copyright"> <em>Know Time Zone</em></span>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+<!-- jQuery -->
+<script src="js/vendor/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/vendor/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/vendor/jquery.easing.min.js"></script>
+
+<!-- Contact Form JavaScript -->
+<script src="js/vendor/jqBootstrapValidation.js"></script>
+<script src="js/vendor/contact_me.js"></script>
+<script src="js/vendor/owl.carousel.min.js"></script>
+<script src="js/vendor/prettify.js"></script>
+<script type="text/javascript" src="js/vendor/css3-animate-it.js"></script>
+
+<!-- Theme JavaScript -->
+<script src="js/vendor/agency.min.js"></script>
+<script src="js/vendor/jquery.mixitup.js"></script>
+<script src="js/vendor/wow.min.js"></script>
+<!---<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="js/vendor/gmaps.js"></script>--->
+<script src="js/main.js"></script>
+<script src="js/script.js"></script>   
+
+</body>
+</html>

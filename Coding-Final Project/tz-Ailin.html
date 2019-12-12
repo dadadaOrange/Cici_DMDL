@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <style>
+        div {
+            width: 38.4px;
+            height: 550px;
+            background-color: rgba(255,255,0,50%);
+            position: absolute;
+            left: 69px;
+            top: 0px;
+            z-index: 2;
+        }
+        img {
+            position: relative;
+            z-index: 1;
+            top: 0px;
+        }
+        button{
+            width: 50px;
+            height: 30px;
+            float: 
+        }
+
+    </style>
+</head>
+<body>
+<button id="1">left</button>
+
+<div id="3">
+</div>
+<img src="images/tz-Aileen.png">
+<button id="2">right</button>
+<script>
+    var left = document.getElementById("2");
+
+    var right = document.getElementById("1");
+    var div = document.getElementById("3");
+    var x = 38.4;
+    left.onclick= function ()
+    {
+        x=x+38.4;
+        div.style.left = x+"px";
+    }
+    right.onclick = function () {
+        x=x-38.4;
+        div.style.left = x+"px";
+    }
+    
+</script>
+
+</body>
+</html>

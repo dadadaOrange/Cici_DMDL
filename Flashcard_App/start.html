@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Quiz Topic Selection</title>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link rel="stylesheet" type="text/css" href="css/start.css">
+
+</head>
+<body>
+	<header>
+		<h1>Select Topics</h1>	
+	</header>
+	<main>
+			<div class="card" id="topicList">
+				<div>
+					<label><input id="topic1" value="html" name="topics" type="checkbox" name="">
+					HTML</label>
+					<div class="metadata">Questions Mastered: 32/100</div>
+					<progress value="32" max="100"></progress>
+				</div>
+				<hr>
+				<div>
+					<label ><input id="topic2" value="css" name="topics" type="checkbox" name="">
+					CSS</label>
+					<div class="metadata">Questions Mastered: 76/100</div>
+					<progress value="76" max="100"></progress>
+				</div>
+				<hr>
+				<div>
+					<label ><input id="topic3" value="javascipt" name="topics" type="checkbox" name="">
+					Javascript</label>
+					<div class="metadata">Questions Mastered: 32/100</div>
+					<progress value="32" max="100"></progress>
+				</div>
+				<hr>
+				<div>
+					<label ><input id="topic4" value="accessiblity" name="topics" type="checkbox" name="">
+					Accessiblity</label>
+					<div class="metadata">Questions Mastered: 23/100</div>
+					<progress value="23" max="100"></progress>
+				</div>
+			</div>
+			<button id="start_btn" class="primary" disabled>Start Quiz</button>
+		
+	</main>
+	<script type="text/javascript" src="data2.js"></script>
+	<script type="text/javascript" src="Start4.js"></script>
+
+	<script type="text/javascript">
+		var startBtn = document.querySelector("#start_btn");
+		var url = "questions.html?";
+		var topicChk = document.querySelector("input[name='topics']");
+
+		
+		startBtn.addEventListener("click", function(){
+			var selectedTopics = document.querySelectorAll("input[type='checkbox']:checked");
+			for (var i=0; i<selectedTopics.length; i++){
+				console.log("> > "+selectedTopics[i].value);
+			}
+			window.location.href = "question.html";
+		})
+
+		
+		topicChk.addEventListener('change', function(){
+			alert("change")
+		})
+
+	</script>
+
+</body>
+</html>

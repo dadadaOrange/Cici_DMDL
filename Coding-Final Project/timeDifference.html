@@ -1,0 +1,190 @@
+﻿<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Time Difference</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="stylesheet" href="../Assignments/css/bootstrap.min.css">
+
+<!--Fonts-->
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+<!--owl-carousel css-->
+<link rel="stylesheet" href="css/owl-carousel/owl.carousel.css">
+<link rel="stylesheet" href="css/owl-carousel/owl.theme.css">
+<link rel="stylesheet" href="css/owl-carousel/owl.transitions.css">
+
+<!--CSS for Progress Bars-->
+<link href="css/progress_animate.css" rel="stylesheet">
+<link href="css/progress_style.css" rel="stylesheet">
+<link href="css/progress_responsive.css" rel="stylesheet">
+
+<link rel="stylesheet"  href="css/animations.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/color1.css">
+
+<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body id="page-top" class="index about_body">
+<!-- Preloader -->
+<div class="preloader"></div>
+<header>
+	<!-- Navigation -->
+	<nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+				</button>
+				<a style="display: none" class="navbar-brand page-scroll" href="#page-top"><img src="images/logos/logo.png" alt=""></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav text-center">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="timeDifference.html">Time Difference</a></li>
+					<li><a href="timeZone.html">Time Zone</a></li>
+					<li><a href="calculation.html">Calculation</a></li>
+					<li><a href="quiz.html">Quiz</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	
+	<div id="page_header">
+		<div class="page_title">
+			<h3>Time Difference</h3>
+		</div>
+	</div>
+</header>
+<!-- Aboutus page header -->
+
+<section id="about_page" class="about_page text-center" >
+	<div class="container">
+		<div>
+    <video width="800" height="600" id="earth_video">
+        <source src="video/earth_video.mov" type="video/mp4">
+    </video>
+    <br/>
+    <button onclick="playVid()" type="button" style="border-radius: 30px">Rotate Earth</button>
+    <script>
+        var myVideo=document.getElementById("earth_video");
+        myVideo.controls = false;
+        myVideo.loop = true;
+        function playVid()
+        {
+            myVideo.play();
+            setTimeout(function(){myVideo.pause()},1500);
+        }
+    </script>
+ </div>
+
+		<h3>Why different places on the earth have different times?</h3>
+		<div class="content_area" style="text-align:left;">
+			<p>Our earth rotates on its own axis. Due to this rotation, different parts of the earth receive different amounts of sunlight. Thus causing morning, noon, evening and night. 
+				<br><br>
+				If we had a unified time across the world, then 12pm would be noon at some places. But it would be night or evening at other places, which would be inconvenient. <br><br>Hence, people at the different places on the earth create their own time in accordance with the sunlight. They conduct daily activtivites based on the local time.<br><br>Next, let’s take a look of the formation of time zones.</p>
+
+			<br/>
+
+			<button class="btn load_more" onclick="window.location='timeZone.html'">Time Zone</button>
+		</div>
+	</div>
+</section>
+
+
+<!-- Go Through Class -->
+<section id="class-facts" class="go-through-class">
+	<div class="container animatedParent">
+		<div class="row">
+			<div class="col-lg-12 text-center col-sm-12">
+				<h2 class="section-heading">Go Through the Class</h2>
+			</div>
+		</div>
+		<div class="row wow fadeInUp slower">
+			<div class="col-md-3">
+				<div class="class-box hide-bar">
+					<i class="iconn-1"></i>
+					<h4>Time Difference </h4>
+					<p>100%</p>
+				</div>                    
+			</div>
+			<div class="col-md-3">
+				<div class="class-box pro">
+					<i class="iconn-2"></i>
+					<h4>Time Zone </h4>
+					<p>0%</p>		
+				</div>                    
+			</div>
+			<div class="col-md-3">
+				<div class="class-box">
+					<i class="iconn-3"></i>
+					<h4>Calculation </h4>
+					<p>0%</p>					
+				</div>                    
+			</div>
+			<div class="col-md-3">
+				<div class="class-box pro">
+					<i class="iconn-4"></i>
+					<h4>Quiz </h4>
+					<p>0%</p>					
+				</div>                    
+			</div>
+			</div>
+	</div>
+</section>
+<!-- Go Through Class End -->
+
+<footer id="footer">
+	<div class="container">
+		
+	
+			<div class="col-md-12">
+				<span class="copyright"> <em>Know Time Zone</a></em></span>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+<!-- jQuery -->
+<script src="js/vendor/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/vendor/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/vendor/jquery.easing.min.js"></script>
+
+<!-- Contact Form JavaScript -->
+<script src="js/vendor/jqBootstrapValidation.js"></script>
+<script src="js/vendor/contact_me.js"></script>
+<script src="js/vendor/owl.carousel.min.js"></script>
+<script src="js/vendor/prettify.js"></script>
+<script type="text/javascript" src="js/vendor/css3-animate-it.js"></script>
+
+<!-- Theme JavaScript -->
+<script src="js/vendor/agency.min.js"></script>
+<script src="js/vendor/jquery.mixitup.js"></script>
+<script src="js/vendor/wow.min.js"></script>
+<!---<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="js/vendor/gmaps.js"></script>--->
+<script src="js/main.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>My Google Map</title>
+	<style>
+		#map{
+			height: 800px;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<h1>My Google Map</h1>
+	<div id="map"></div>
+	<script>
+		function initMap(){
+
+			//ADD CITIES
+			var cities = {
+				"Australia/Adelaide":{
+					city: "Adelaide",
+					coords: {
+						lat:-34.92123, 
+						lng: 138.599503
+					}
+				},
+				"Asia/Shanghai":{
+					city: "Shanghai",
+					coords: {
+						lat:31.22222, 
+						lng: 121.45806
+					}
+				},
+				"America/New_York":{
+					city: "New York",
+					coords: {
+						lat:40.730610, 
+						lng: -73.935242
+					}
+				},
+				"Asia/Baku":{
+					city: "Baku",
+					coords: {
+						lat:40.409264, 
+						lng: 49.867092
+					}
+				},
+				"Europe/Amsterdam":{
+					city: "Amsterdam",
+					coords: {
+						lat:52.370216, 
+						lng: 4.895168
+					}
+				},
+				"Europe/Berlin":{
+					city: "Berlin",
+					coords: {
+						lat:52.520008, 
+						lng: 13.404954
+					}
+				},
+				"Europe/Moscow":{
+					city: "Moscow",
+					coords: {
+						lat:55.751244, 
+						lng: 37.618423
+					}
+				},
+				"Indian/Maldives":{
+					city: "Maldives",
+					coords: {
+						lat:1.924992, 
+						lng: 73.399658
+					}
+				},
+				"Pacific/Fiji":{
+					city: "Fiji",
+					coords: {
+						lat: -17.713371, 
+						lng: 178.065033
+					}
+				},
+				"America/Mexico_City":{
+					city: "Mexico_City",
+					coords: {
+						lat: 19.432608, 
+						lng: -99.133209
+					}
+				},
+				"America/Argentina/Tucuman":{
+					city: "Tucuman",
+					coords: {
+						lat: -26.808285, 
+						lng: -65.217590
+					}
+				},
+				"America/Chicago":{
+					city: "Chicago",
+					coords: {
+						lat: 41.881832, 
+						lng: -87.623177
+					}
+				},
+				"America/Denver":{
+					city: "Denver",
+					coords: {
+						lat: 39.742043, 
+						lng: -104.991531
+					}
+				},
+				"America/Havana":{
+					city: "Havana",
+					coords: {
+						lat: 23.113592, 
+						lng: -82.366592
+					}
+				},
+				"Africa/Juba":{
+					city: "Juba",
+					coords: {
+						lat: 4.859363, 
+						lng: 31.571251
+					}
+				},
+				"Africa/Abidijan":{
+					city: "Abidijan",
+					coords: {
+						lat: 5.345317, 
+						lng: -4.024429
+					}
+				}
+			}
+
+			for(var city in cities){
+
+				console.log(city);
+				fetch(`http://worldtimeapi.org/api/timezone/${city}`)
+					.then(response => {
+					    return response.json()
+					  })
+					  .then(data => {
+						addMarker ({coords:cities[data.timezone].coords,
+							content: cities[data.timezone].city + " " + data.datetime
+						});
+					  });
+
+
+			}
+
+			//map options
+			var options = {
+				zoom: 3, 
+				center: {lat: 41.902782, lng: 12.496366}
+			}
+			//New map
+			var map = new 
+			google.maps.Map (document.getElementById('map'), options);
+
+			//add marker function		
+			function addMarker (props){ 
+				// Add marker
+				var marker = new google.maps.Marker ({
+					position: props. coords,
+					//{lat:40.730610, lng: -73.935242},
+					map:map,
+				//icon:''
+				});
+
+				//check content
+				if(props.content){
+						var infoWindow = new google.maps.InfoWindow ({
+						content: props.content
+					});
+							marker. addListener ('click', function(){
+						infoWindow.open(map,marker);
+					});
+				}
+			}
+		}
+			</script>
+ 	<script async defer
+   		 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsykH1f5s62sydbyxAwQJFG33EQYmsD0M&callback=initMap">
+    </script>
+    
+</body>
+</html>

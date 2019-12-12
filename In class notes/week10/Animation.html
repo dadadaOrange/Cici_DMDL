@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #offCanvas{
+            width: 300px;
+            background-color: grey;
+
+            animation-name: MyAni;
+            animation-duration: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div id="dragMe" draggable="true"><button id="close_btn"> close </button></div>
+
+
+    <script type="text/javascript">
+        const dragMe = document.querySelector("#drayMe");
+       let ondragstart = (event) =>{
+           console.log('----START DRAG:'${event.currentTarget.id});
+       }
+        dragMe.addEventListener('dragstart', ondragstart)
+
+    </script>
+</body>
+</html>
