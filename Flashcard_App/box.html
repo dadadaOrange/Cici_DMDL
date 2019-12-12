@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="左" id="1">
+<input type="button" value="右" id="2">
+<div id="3">
+</div>
+
+<script>
+    var left = document.getElementById("2");
+
+    var right = document.getElementById("1");
+    var div = document.getElementById("3");
+    var x = 100;
+    left.onclick= function ()
+    {
+        x=x+10;
+        div.style.left = x+"px";
+    }
+    right.onclick = function () {
+        x=x-10;
+        div.style.left = x+"px";
+    }
+
+</script>
+
+</body>
+</html>

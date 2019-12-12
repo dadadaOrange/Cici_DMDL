@@ -9,8 +9,7 @@
 		<div id="container"></div>
 
 		<script type="text/javascript">
-			
-	
+
 			let sneakers = [
 				{
 					brand: "Puma",
@@ -30,7 +29,7 @@
 			//locate the div with the id named container using querySelector
 			const container_ele = document.querySelector("#container"); 
 			//create a for loop that loops sneakers array
-			for (var i=0;i<sneakers.length;i++) {
+			for (let i=0;i<sneakers.length;i++) {
 				
 			
 				//INSIDE the loop create an h2 element and add the brand name inside of it
@@ -38,7 +37,7 @@
 				brand_ele.innerHTML=sneakers[i].brand;
 				container_ele.appendChild(brand_ele);
 				//add another for loop INSIDE of the sneakers loop and loop all the colors.
-				for (var x=0;x<sneakers[i].colors.length;x++) {
+				for (let x=0;x<sneakers[i].colors.length;x++) {
 					
 	
 					//INSIDE the nest loop create button elements
