@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--=============================================== get position =================================-->
+<div>
+    <p id="get position">get your position：</p>
+    <button onclick="getLocation()">Get your position</button>
+</div>
+    <script>
+        var x=document.getElementById("get position");
+        function getLocation()
+        {
+            if (navigator.geolocation)
+            {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            else
+            {
+                x.innerHTML="The browser does not support obtaining geographic locations.";
+            }
+        }
+
+        function showPosition(position)
+        {
+            x.innerHTML="latitude: " + position.coords.latitude +
+                "<br>longitude: " + position.coords.longitude;
+            alert(
+                x.innerHTML="latitude: " + position.coords.latitude +"    "+
+                    "longitude: " + position.coords.longitude)
+        }
+        <!--=============================================== get position =================================-->
+    </script>
+</body>
+</html>
