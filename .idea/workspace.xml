@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c40ae40-be60-4cb0-8b03-7841b5cda3bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Flashcard_App/Start4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Flashcard_App/data2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Flashcard_App/question.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignments/week8 Calculator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flashcard_App/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcard_App/Login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flashcard_App/QuizAnswer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Flashcard_App/QuizAnswer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flashcard_App/Start.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/In class/week7/Start3.js" beforeDir="false" afterPath="$PROJECT_DIR$/In class/week7/Start4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/In class/week7/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/In class/week7/start.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/In class/week7/week7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignments/week7_time.html" beforeDir="false" afterPath="$PROJECT_DIR$/assignments/week7_time.html" afterDir="false" />
-    </list>
+    <list default="true" id="5c40ae40-be60-4cb0-8b03-7841b5cda3bf" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +106,7 @@
       <workItem from="1573777439689" duration="668000" />
       <workItem from="1575400885840" duration="215000" />
       <workItem from="1576011533282" duration="11563000" />
-      <workItem from="1576111297534" duration="12137000" />
+      <workItem from="1576111297534" duration="12309000" />
     </task>
     <servers />
   </component>
